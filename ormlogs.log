@@ -1,0 +1,102 @@
+[2024-10-05T12:51:01.756Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T12:51:40.998Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T12:55:36.018Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:00:35.243Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:00:52.022Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:00:58.856Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:01:02.168Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:25:54.908Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:26:52.312Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:28:07.321Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:34:07.723Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:34:12.291Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:39:27.776Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:40:36.919Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:41:28.130Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:41:57.252Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:42:05.727Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:12.254Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:13.893Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:36.651Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:39.681Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:42.709Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:45.734Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:48.763Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:51.793Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:54.809Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:44:57.829Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:45:00.853Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:46:18.693Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:46:55.547Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:52:06.097Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:52:13.993Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["123"]
+[2024-10-05T13:52:49.640Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:52:52.753Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["123"]
+[2024-10-05T13:52:59.003Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:52:59.103Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["123"]
+[2024-10-05T13:53:40.507Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["123"]
+[2024-10-05T13:53:59.750Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:54:01.043Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["123"]
+[2024-10-05T13:54:12.859Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["admin"]
+[2024-10-05T13:54:30.289Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T13:54:33.632Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["admin"]
+[2024-10-05T13:58:10.458Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["admin"]
+[2024-10-05T13:58:38.049Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["ry"]
+[2024-10-05T15:05:26.417Z][QUERY]: SELECT `UserEntity`.`status` AS `UserEntity_status`, `UserEntity`.`del_flag` AS `UserEntity_del_flag`, `UserEntity`.`create_by` AS `UserEntity_create_by`, `UserEntity`.`create_time` AS `UserEntity_create_time`, `UserEntity`.`update_by` AS `UserEntity_update_by`, `UserEntity`.`update_time` AS `UserEntity_update_time`, `UserEntity`.`remark` AS `UserEntity_remark`, `UserEntity`.`user_id` AS `UserEntity_user_id`, `UserEntity`.`dept_id` AS `UserEntity_dept_id`, `UserEntity`.`user_name` AS `UserEntity_user_name`, `UserEntity`.`nick_name` AS `UserEntity_nick_name`, `UserEntity`.`user_type` AS `UserEntity_user_type`, `UserEntity`.`email` AS `UserEntity_email`, `UserEntity`.`phonenumber` AS `UserEntity_phonenumber`, `UserEntity`.`sex` AS `UserEntity_sex`, `UserEntity`.`avatar` AS `UserEntity_avatar`, `UserEntity`.`password` AS `UserEntity_password`, `UserEntity`.`login_ip` AS `UserEntity_login_ip`, `UserEntity`.`login_date` AS `UserEntity_login_date` FROM `sys_user` `UserEntity` WHERE ((`UserEntity`.`user_name` = ?)) LIMIT 1 -- PARAMETERS: ["ry"]
+[2024-10-05T15:09:17.757Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:09:19.847Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:10:59.388Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:13:44.262Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:14:58.212Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:19:43.021Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:20:09.381Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:20:15.053Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:20:20.084Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:22:30.596Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:23:05.623Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:23:08.695Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:23:21.356Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:23:36.559Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:23:55.893Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:23:57.618Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:26:24.948Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:36:48.146Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:37:18.960Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:37:31.611Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:37:38.690Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:38:36.480Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:38:46.622Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:38:51.003Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:45:29.841Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:48:27.291Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:49:39.582Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:49:45.169Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:49:49.545Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:50:00.795Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:51:21.972Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:51:32.492Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:54:37.731Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:54:57.157Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:55:36.160Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T15:57:24.363Z][QUERY]: SELECT `SysConfigEntity`.`status` AS `SysConfigEntity_status`, `SysConfigEntity`.`del_flag` AS `SysConfigEntity_del_flag`, `SysConfigEntity`.`create_by` AS `SysConfigEntity_create_by`, `SysConfigEntity`.`create_time` AS `SysConfigEntity_create_time`, `SysConfigEntity`.`update_by` AS `SysConfigEntity_update_by`, `SysConfigEntity`.`update_time` AS `SysConfigEntity_update_time`, `SysConfigEntity`.`remark` AS `SysConfigEntity_remark`, `SysConfigEntity`.`config_id` AS `SysConfigEntity_config_id`, `SysConfigEntity`.`config_name` AS `SysConfigEntity_config_name`, `SysConfigEntity`.`config_key` AS `SysConfigEntity_config_key`, `SysConfigEntity`.`config_value` AS `SysConfigEntity_config_value`, `SysConfigEntity`.`config_type` AS `SysConfigEntity_config_type` FROM `sys_config` `SysConfigEntity` WHERE ((`SysConfigEntity`.`config_key` = ?)) LIMIT 1 -- PARAMETERS: ["sys.account.captchaEnabled"]
+[2024-10-05T15:57:28.228Z][QUERY]: SELECT `SysConfigEntity`.`status` AS `SysConfigEntity_status`, `SysConfigEntity`.`del_flag` AS `SysConfigEntity_del_flag`, `SysConfigEntity`.`create_by` AS `SysConfigEntity_create_by`, `SysConfigEntity`.`create_time` AS `SysConfigEntity_create_time`, `SysConfigEntity`.`update_by` AS `SysConfigEntity_update_by`, `SysConfigEntity`.`update_time` AS `SysConfigEntity_update_time`, `SysConfigEntity`.`remark` AS `SysConfigEntity_remark`, `SysConfigEntity`.`config_id` AS `SysConfigEntity_config_id`, `SysConfigEntity`.`config_name` AS `SysConfigEntity_config_name`, `SysConfigEntity`.`config_key` AS `SysConfigEntity_config_key`, `SysConfigEntity`.`config_value` AS `SysConfigEntity_config_value`, `SysConfigEntity`.`config_type` AS `SysConfigEntity_config_type` FROM `sys_config` `SysConfigEntity` WHERE ((`SysConfigEntity`.`config_key` = ?)) LIMIT 1 -- PARAMETERS: ["sys.account.captchaEnabled"]
+[2024-10-05T16:01:07.671Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:01:46.975Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:01:48.356Z][QUERY]: SELECT `SysConfigEntity`.`status` AS `SysConfigEntity_status`, `SysConfigEntity`.`del_flag` AS `SysConfigEntity_del_flag`, `SysConfigEntity`.`create_by` AS `SysConfigEntity_create_by`, `SysConfigEntity`.`create_time` AS `SysConfigEntity_create_time`, `SysConfigEntity`.`update_by` AS `SysConfigEntity_update_by`, `SysConfigEntity`.`update_time` AS `SysConfigEntity_update_time`, `SysConfigEntity`.`remark` AS `SysConfigEntity_remark`, `SysConfigEntity`.`config_id` AS `SysConfigEntity_config_id`, `SysConfigEntity`.`config_name` AS `SysConfigEntity_config_name`, `SysConfigEntity`.`config_key` AS `SysConfigEntity_config_key`, `SysConfigEntity`.`config_value` AS `SysConfigEntity_config_value`, `SysConfigEntity`.`config_type` AS `SysConfigEntity_config_type` FROM `sys_config` `SysConfigEntity` WHERE ((`SysConfigEntity`.`config_key` = ?)) LIMIT 1 -- PARAMETERS: ["sys.account.captchaEnabled"]
+[2024-10-05T16:03:55.949Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:04:29.371Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:06:15.565Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:08:01.411Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:08:14.815Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:08:21.826Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:11:44.307Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:12:06.591Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:12:50.893Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:13:17.291Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:14:02.639Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:14:29.383Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:14:58.187Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:16:26.597Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:16:45.548Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:22:39.241Z][QUERY]: SELECT VERSION() AS `version`
+[2024-10-05T16:22:42.025Z][QUERY]: SELECT VERSION() AS `version`

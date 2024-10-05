@@ -1,0 +1,27 @@
+app:
+  port: 3000
+  prefix: '/api'
+# 数据库配置
+db:
+  mysql:
+    host: 'localhost'
+    username: 'root'
+    password: 'huang123456'
+    database: 'nest-admin'
+    port: 3306
+    charset: 'utf8mb4'
+    logger: 'file'
+    logging: true
+    multipleStatements: true
+    dropSchema: false
+    synchronize: false
+    supportBigNumbers: true
+    bigNumberStrings: true
+
+# redis 配置
+redis:
+  host: 'localhost'
+  password: '*********'
+  port: 6379
+  db: 2
+  keyPrefix: ''
