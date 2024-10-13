@@ -10,7 +10,7 @@ const options = {
   // 验证码图像宽度
   width: 100,
   // 验证码图像高度
-  height: 40,
+  height: 36,
   // 干扰线的数量
   noise: 2,
   // 验证码背景颜色

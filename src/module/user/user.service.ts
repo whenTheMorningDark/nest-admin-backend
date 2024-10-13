@@ -7,6 +7,7 @@ import { ConfigService } from '../config/config.service';
 import { RedisService } from '../redis/redis.service';
 import { CacheEnum } from 'src/common/enum/index';
 import { ResultData } from 'src/common/utils/result';
+import * as bcrypt from 'bcrypt';
 @Injectable()
 export class UserService {
   constructor(
@@ -32,9 +33,12 @@ export class UserService {
     const data = await this.userRepo.findOne({
       where: {
         userName: user.username,
-      }
+      },
+      select: ['userId', 'password'],
     });
-    // return data;
+    if (!(data && bcrypt.compareSync(user.password, data.password))) {
+      return ResultData.fail(500, `帐号或密码错误`);
+    }
     return ResultData.ok(data, '登录成功',);
   }
 }
