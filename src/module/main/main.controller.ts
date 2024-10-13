@@ -1,5 +1,6 @@
-import { Body, Controller, Post, HttpCode, Get } from '@nestjs/common';
+import { Body, Controller, Post, HttpCode, Get, Request } from '@nestjs/common';
 import { LoginDto } from './dto';
+import * as Useragent from 'useragent';
 import { MainService } from './main.service';
 import { ConfigService } from 'src/module/config/config.service';
 import { GenerateUUID } from 'src/common/utils/index';
@@ -14,8 +15,18 @@ export class MainController {
   ) { }
   @Post("/login")
   @HttpCode(200)
-  login(@Body() user: LoginDto) {
-    return this.mainService.login(user);
+  login(@Body() user: LoginDto, @Request() req) {
+    const agent = Useragent.parse(req.headers['user-agent']);
+    const os = agent.os.toJSON().family;
+    const browser = agent.toAgent();
+    const clientInfo = {
+      userAgent: req.headers['user-agent'],
+      ipaddr: req.ip,
+      browser: browser,
+      os: os,
+      loginLocation: '',
+    };
+    return this.mainService.login(user, clientInfo);
   }
   @Get("/captchaImage")
   async captchaImage() {
