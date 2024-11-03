@@ -60,7 +60,22 @@ export class UserService {
     await this.updateLoginDate(data.userId)
     const uuid = GenerateUUID();
     const token = this.createToken({ uuid: uuid, userId: userData.userId });
+    const metaData = {
+      browser: clientInfo.browser,
+      ipaddr: clientInfo.ipaddr,
+      loginLocation: clientInfo.loginLocation,
+      loginTime: new Date(),
+      os: clientInfo.os,
+      permissions: [],
+      roles: userData.roles,
+      token: uuid,
+      user: userData,
+      userId: userData.userId,
+      username: userData.userName,
+      deptId: userData.deptId,
+    };
 
+    await this.redisService.set(`${CacheEnum.LOGIN_TOKEN_KEY}${uuid}`, metaData, 1000 * 60 * 60 * 24);
     return ResultData.ok(token, '登录成功',);
   }
   // 生成token

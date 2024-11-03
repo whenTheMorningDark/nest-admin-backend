@@ -9,6 +9,8 @@ import { ConfigModule } from './module/config/config.module';
 import { RedisModule } from './module/redis/redis.module';
 import { RoleModule } from './module/role/role.module';
 import configuration from './common/config/index';
+import { JwtAuthGuard } from 'src/common/guards/auth.guard';
+import { APP_GUARD } from '@nestjs/core';
 @Module({
   imports: [
     // 配置模块
@@ -53,6 +55,11 @@ import configuration from './common/config/index';
     ConfigModule,
     RoleModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
+  ],
 })
 export class AppModule { }

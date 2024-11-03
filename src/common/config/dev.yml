@@ -31,3 +31,16 @@ jwt:
   secretkey: 'fast-nest-admin'
   expiresin: '1h'
   refreshExpiresIn: '2h'
+
+# 权限 白名单配置
+perm:
+  router:
+    whitelist:
+      [
+        { path: '/captchaImage', method: 'GET' },
+        { path: '/register', method: 'POST' },
+        { path: '/login', method: 'POST' },
+        { path: '/logout', method: 'POST' },
+        { path: '/perm/{id}', method: 'GET' },
+        { path: '/upload', method: 'POST' },
+      ]
