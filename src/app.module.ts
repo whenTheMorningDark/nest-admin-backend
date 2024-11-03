@@ -7,6 +7,7 @@ import { UserModule } from './module/user/user.module';
 import { MainModule } from './module/main/main.module';
 import { ConfigModule } from './module/config/config.module';
 import { RedisModule } from './module/redis/redis.module';
+import { RoleModule } from './module/role/role.module';
 import configuration from './common/config/index';
 @Module({
   imports: [
@@ -50,6 +51,7 @@ import configuration from './common/config/index';
     UserModule,
     MainModule,
     ConfigModule,
+    RoleModule,
   ],
   providers: [],
 })

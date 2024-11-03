@@ -25,3 +25,9 @@ redis:
   port: 6379
   db: 2
   keyPrefix: ''
+
+# jwt 配置
+jwt:
+  secretkey: 'fast-nest-admin'
+  expiresin: '1h'
+  refreshExpiresIn: '2h'
