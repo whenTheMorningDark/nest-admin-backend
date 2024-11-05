@@ -75,7 +75,7 @@ export class UserService {
       deptId: userData.deptId,
     };
 
-    await this.redisService.set(`${CacheEnum.LOGIN_TOKEN_KEY}${uuid}`, metaData, 1000 * 60 * 60 * 24);
+    await this.redisService.set(`${CacheEnum.LOGIN_TOKEN_KEY}${uuid}`, metaData, 6000000);
     return ResultData.ok(token, '登录成功',);
   }
   // 生成token
