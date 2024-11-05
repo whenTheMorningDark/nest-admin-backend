@@ -60,6 +60,7 @@ export class UserService {
     await this.updateLoginDate(data.userId)
     const uuid = GenerateUUID();
     const token = this.createToken({ uuid: uuid, userId: userData.userId });
+    const roles = userData.roles.map((item) => item.roleKey);
     const metaData = {
       browser: clientInfo.browser,
       ipaddr: clientInfo.ipaddr,
@@ -67,7 +68,7 @@ export class UserService {
       loginTime: new Date(),
       os: clientInfo.os,
       permissions: [],
-      roles: userData.roles,
+      roles,
       token: uuid,
       user: userData,
       userId: userData.userId,

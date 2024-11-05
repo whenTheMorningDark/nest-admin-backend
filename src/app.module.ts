@@ -11,6 +11,7 @@ import { RoleModule } from './module/role/role.module';
 import configuration from './common/config/index';
 import { JwtAuthGuard } from 'src/common/guards/auth.guard';
 import { APP_GUARD } from '@nestjs/core';
+import { RolesGuard } from './common/guards/roles.guard';
 @Module({
   imports: [
     // 配置模块
@@ -59,6 +60,10 @@ import { APP_GUARD } from '@nestjs/core';
     {
       provide: APP_GUARD,
       useClass: JwtAuthGuard,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: RolesGuard,
     },
   ],
 })
