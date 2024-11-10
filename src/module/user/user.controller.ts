@@ -1,13 +1,12 @@
 import { Controller, Get, Query, Request } from '@nestjs/common';
+import { RequirePermission } from 'src/common/decorators/require-premission.decorator';
 import { RequireRole } from 'src/common/decorators/require-role.decorator';
+import { ResultData } from 'src/common/utils/result';
 @Controller('system/user')
 export class UserController {
-  @RequireRole('common')
+  @RequirePermission('system:user:list')
   @Get('list')
   findAll(@Query() query: any, @Request() req) {
-    console.log(req.user, 'ff')
-    return 'This action returns all catsasd';
-    // const user = req.user.user;
-    // return user;
+    return ResultData.ok(req.user, '查询成功');
   }
 }

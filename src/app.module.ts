@@ -12,6 +12,8 @@ import configuration from './common/config/index';
 import { JwtAuthGuard } from 'src/common/guards/auth.guard';
 import { APP_GUARD } from '@nestjs/core';
 import { RolesGuard } from './common/guards/roles.guard';
+import { PermissionGuard } from 'src/common/guards/permission.guard';
+import { MenuModule } from './module/menu/menu.module';
 @Module({
   imports: [
     // 配置模块
@@ -55,6 +57,7 @@ import { RolesGuard } from './common/guards/roles.guard';
     MainModule,
     ConfigModule,
     RoleModule,
+    MenuModule,
   ],
   providers: [
     {
@@ -64,6 +67,10 @@ import { RolesGuard } from './common/guards/roles.guard';
     {
       provide: APP_GUARD,
       useClass: RolesGuard,
+    },
+    {
+      provide: APP_GUARD,
+      useClass: PermissionGuard,
     },
   ],
 })
