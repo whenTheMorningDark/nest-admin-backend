@@ -1,7 +1,10 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { AuthModule } from './module/auth/auth.module';
-import { ConfigModule as nestConfigModule, ConfigService } from '@nestjs/config';
+import {
+  ConfigModule as nestConfigModule,
+  ConfigService,
+} from '@nestjs/config';
 import { RedisClientOptions } from '@liaoliaots/nestjs-redis';
 import { UserModule } from './module/user/user.module';
 import { MainModule } from './module/main/main.module';
@@ -74,4 +77,4 @@ import { MenuModule } from './module/menu/menu.module';
     },
   ],
 })
-export class AppModule { }
+export class AppModule {}

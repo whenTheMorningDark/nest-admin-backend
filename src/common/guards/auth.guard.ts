@@ -1,7 +1,13 @@
 import { Reflector } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { AuthGuard } from '@nestjs/passport';
-import { ExecutionContext, ForbiddenException, Inject, Injectable, UnauthorizedException } from '@nestjs/common';
+import {
+  ExecutionContext,
+  ForbiddenException,
+  Inject,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
 
 // import { UserService } from 'src/module/system/user/user.service';
 import { UserService } from 'src/module/user/user.service';
@@ -16,7 +22,9 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     private readonly config: ConfigService,
   ) {
     super();
-    this.globalWhiteList = [].concat(this.config.get('perm.router.whitelist') || []);
+    this.globalWhiteList = [].concat(
+      this.config.get('perm.router.whitelist') || [],
+    );
   }
 
   async canActivate(ctx: ExecutionContext): Promise<boolean> {
@@ -29,7 +37,8 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
     const accessToken = req.get('Authorization');
     if (!accessToken) throw new ForbiddenException('请重新登录');
     const atUserId = await this.userService.parseToken(accessToken);
-    if (!atUserId) throw new UnauthorizedException('当前登录已过期，请重新登录');
+    if (!atUserId)
+      throw new UnauthorizedException('当前登录已过期，请重新登录');
     return await this.activate(ctx);
   }
 
@@ -44,7 +53,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
    */
   checkWhiteList(ctx: ExecutionContext): boolean {
     const req = ctx.switchToHttp().getRequest();
-    const i = this.globalWhiteList.findIndex((route) => {
+    const i = this.globalWhiteList.findIndex(route => {
       // 请求方法类型相同
       if (req.method.toUpperCase() === route.method.toUpperCase()) {
         // 对比 url

@@ -1,12 +1,18 @@
 import { Module, DynamicModule } from '@nestjs/common';
 import { RedisService } from './redis.service';
-import { RedisModule as liaoliaoRedisModule, RedisModuleAsyncOptions } from '@liaoliaots/nestjs-redis';
+import {
+  RedisModule as liaoliaoRedisModule,
+  RedisModuleAsyncOptions,
+} from '@liaoliaots/nestjs-redis';
 @Module({
   providers: [RedisService],
   exports: [RedisService],
 })
 export class RedisModule {
-  static forRoot(options: RedisModuleAsyncOptions, isGlobal = true): DynamicModule {
+  static forRoot(
+    options: RedisModuleAsyncOptions,
+    isGlobal = true,
+  ): DynamicModule {
     return {
       module: RedisModule,
       imports: [liaoliaoRedisModule.forRootAsync(options, isGlobal)],
@@ -15,7 +21,10 @@ export class RedisModule {
     };
   }
 
-  static forRootAsync(options: RedisModuleAsyncOptions, isGlobal = true): DynamicModule {
+  static forRootAsync(
+    options: RedisModuleAsyncOptions,
+    isGlobal = true,
+  ): DynamicModule {
     return {
       module: RedisModule,
       imports: [liaoliaoRedisModule.forRootAsync(options, isGlobal)],

@@ -26,11 +26,15 @@ export class UserService {
     private readonly jwtService: JwtService,
   ) { }
   async login(user: LoginDto, clientInfo: ClientInfoDto) {
-    const enable = await this.configService.getConfigValue('sys.account.captchaEnabled');
+    const enable = await this.configService.getConfigValue(
+      'sys.account.captchaEnabled',
+    );
     const captchaEnabled: boolean = enable === 'true';
 
     if (captchaEnabled) {
-      const code = await this.redisService.get(CacheEnum.CAPTCHA_CODE_KEY + user.uuid);
+      const code = await this.redisService.get(
+        CacheEnum.CAPTCHA_CODE_KEY + user.uuid,
+      );
       if (!code) {
         return ResultData.fail(500, `验证码已过期`);
       }
@@ -57,17 +61,18 @@ export class UserService {
     if (userData.status === StatusEnum.STOP) {
       return ResultData.fail(500, `您已被停用，如需正常使用请联系管理员`);
     }
-    await this.updateLoginDate(data.userId)
+    await this.updateLoginDate(data.userId);
     const uuid = GenerateUUID();
     const token = this.createToken({ uuid: uuid, userId: userData.userId });
-    const roles = userData.roles.map((item) => item.roleKey);
+    const permissions = await this.getUserPermissions(userData.userId);
+    const roles = userData.roles.map(item => item.roleKey);
     const metaData = {
       browser: clientInfo.browser,
       ipaddr: clientInfo.ipaddr,
       loginLocation: clientInfo.loginLocation,
       loginTime: new Date(),
       os: clientInfo.os,
-      permissions: [],
+      permissions,
       roles,
       token: uuid,
       user: userData,
@@ -76,9 +81,26 @@ export class UserService {
       deptId: userData.deptId,
     };
 
-    await this.redisService.set(`${CacheEnum.LOGIN_TOKEN_KEY}${uuid}`, metaData, 6000000);
-    return ResultData.ok(token, '登录成功',);
+    await this.redisService.set(
+      `${CacheEnum.LOGIN_TOKEN_KEY}${uuid}`,
+      metaData,
+      6000000,
+    );
+    return ResultData.ok(token, '登录成功');
   }
+
+  async getUserPermissions(userId: number) {
+    if (userId === 1) {
+      return ['*:*:*'];
+    }
+    const roleIds = await this.getRoleIds([userId]);
+    const list = await this.roleService.getPermissionsByRoleIds(roleIds);
+    const permissions = Uniq(list.map(item => item.perms)).filter(item => {
+      return item;
+    });
+    return permissions;
+  }
+
   // 生成token
   createToken(payload: { uuid: string; userId: number }): string {
     const accessToken = this.jwtService.sign(payload);
@@ -97,22 +119,30 @@ export class UserService {
 
   // 更新登录时间
   updateLoginDate(userId: number) {
-    this.userRepo.update({
-      userId: userId,
-    }, {
-      loginDate: new Date(),
-    });
+    this.userRepo.update(
+      {
+        userId: userId,
+      },
+      {
+        loginDate: new Date(),
+      },
+    );
   }
 
   // 获取用户信息 用户部门信息 角色 岗位等
   async getUserinfo(userId: number) {
-    const entity = this.userRepo.createQueryBuilder("user")
+    const entity = this.userRepo.createQueryBuilder('user');
     entity.where({
       userId: userId,
-      delFlag: DelFlagEnum.NORMAL
-    })
+      delFlag: DelFlagEnum.NORMAL,
+    });
     // 联合查询部门信息
-    entity.leftJoinAndMapOne('user.dept', SysDeptEntity, 'dept', 'dept.deptId = user.deptId');
+    entity.leftJoinAndMapOne(
+      'user.dept',
+      SysDeptEntity,
+      'dept',
+      'dept.deptId = user.deptId',
+    );
     // 联合查询角色信息
     const roleIds = await this.getRoleIds([userId]);
     const roles = await this.roleService.findRoles({
@@ -133,7 +163,7 @@ export class UserService {
       },
       select: ['roleId'],
     });
-    const roleIds = roleList.map((item) => item.roleId);
+    const roleIds = roleList.map(item => item.roleId);
     return Uniq(roleIds);
   }
 }

@@ -4,7 +4,7 @@ import { UserService } from '../user/user.service';
 import { createMath } from 'src/common/utils/captcha';
 @Injectable()
 export class MainService {
-  constructor(private readonly userService: UserService) { }
+  constructor(private readonly userService: UserService) {}
   async login(user: LoginDto, clientInfo: ClientInfoDto) {
     const loginLog = {
       ...clientInfo,
@@ -16,7 +16,6 @@ export class MainService {
     return loginRes;
   }
   async createCaptcha() {
-    return createMath()
+    return createMath();
   }
-
 }

@@ -9,4 +9,4 @@ import { RedisModule } from 'src/module/redis/redis.module';
   controllers: [MainController],
   providers: [MainService],
 })
-export class MainModule { }
+export class MainModule {}

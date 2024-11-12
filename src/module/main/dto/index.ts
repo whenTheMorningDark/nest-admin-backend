@@ -1,4 +1,15 @@
-import { IsString, IsJSON, IsEnum, IsPhoneNumber, Min, IsOptional, IsBoolean, IsNumber, MinLength, MaxLength } from 'class-validator';
+import {
+  IsString,
+  IsJSON,
+  IsEnum,
+  IsPhoneNumber,
+  Min,
+  IsOptional,
+  IsBoolean,
+  IsNumber,
+  MinLength,
+  MaxLength,
+} from 'class-validator';
 
 export enum StatusEnum {
   STATIC = '0',
@@ -10,7 +21,7 @@ export class LoginDto {
   @IsString()
   code?: string;
 
-  @IsString()
+    @IsString()
   @MinLength(2)
   @MaxLength(10)
   username: string;
@@ -25,7 +36,7 @@ export class LoginDto {
   uuid?: string;
 }
 
-export class RegisterDto extends LoginDto { }
+export class RegisterDto extends LoginDto {}
 
 export class ClientInfoDto {
   ipaddr: string;

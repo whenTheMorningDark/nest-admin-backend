@@ -7,6 +7,6 @@ import { RedisModule } from 'src/module/redis/redis.module';
 @Module({
   imports: [PassportModule.register({ defaultStrategy: 'jwt' }), RedisModule],
   providers: [AuthService, AuthStrategy],
-  controllers: [AuthController]
+  controllers: [AuthController],
 })
-export class AuthModule { }
+export class AuthModule {}

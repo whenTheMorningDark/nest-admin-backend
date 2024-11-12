@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { FindManyOptions, Repository, In } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';

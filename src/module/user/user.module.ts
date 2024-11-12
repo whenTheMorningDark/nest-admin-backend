@@ -10,7 +10,7 @@ import { SysUserWithRoleEntity } from './entityes/user-role.entity';
 import { RoleModule } from 'src/module/role/role.module';
 import { JwtModule } from '@nestjs/jwt';
 @Module({
-  imports: [
+      imports: [
     TypeOrmModule.forFeature([UserEntity, SysUserWithRoleEntity]),
     ConfigModule,
     RedisModule,
@@ -21,10 +21,10 @@ import { JwtModule } from '@nestjs/jwt';
         secret: config.get('jwt.secretkey'),
       }),
       inject: [ConfigService],
-    })
+    }),
   ],
   providers: [UserService],
   controllers: [UserController],
   exports: [UserService],
 })
-export class UserModule { }
+export class UserModule {}

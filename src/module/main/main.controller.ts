@@ -11,9 +11,9 @@ export class MainController {
   constructor(
     private readonly mainService: MainService,
     private readonly configService: ConfigService,
-    private readonly redisService: RedisService
-  ) { }
-  @Post("/login")
+    private readonly redisService: RedisService,
+  ) {}
+  @Post('/login')
   @HttpCode(200)
   login(@Body() user: LoginDto, @Request() req) {
     const agent = Useragent.parse(req.headers['user-agent']);
@@ -28,9 +28,11 @@ export class MainController {
     };
     return this.mainService.login(user, clientInfo);
   }
-  @Get("/captchaImage")
+  @Get('/captchaImage')
   async captchaImage() {
-    const enable = await this.configService.getConfigValue('sys.account.captchaEnabled');
+    const enable = await this.configService.getConfigValue(
+      'sys.account.captchaEnabled',
+    );
     const captchaEnabled: boolean = enable === 'true';
     const data = {
       captchaEnabled,
@@ -42,17 +44,21 @@ export class MainController {
         const captchaInfo = await this.mainService.createCaptcha();
         data.img = captchaInfo.data;
         data.uuid = GenerateUUID();
-        await this.redisService.set(CacheEnum.CAPTCHA_CODE_KEY + data.uuid, captchaInfo.text.toLowerCase(), 1000 * 60 * 5);
+        await this.redisService.set(
+          CacheEnum.CAPTCHA_CODE_KEY + data.uuid,
+          captchaInfo.text.toLowerCase(),
+          1000 * 60 * 5,
+        );
         return {
           data,
-          message: "获取验证码成功"
+          message: '获取验证码成功',
         };
       }
     } catch (e) {
       return {
         data: null,
-        message: "获取验证码失败"
-      }
+        message: '获取验证码失败',
+      };
     }
     // return configData
   }

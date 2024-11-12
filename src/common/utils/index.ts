@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import * as Lodash from "lodash";
+import * as Lodash from 'lodash';
 export function GenerateUUID(): string {
   const uuid = uuidv4();
   return uuid.replaceAll('-', '');

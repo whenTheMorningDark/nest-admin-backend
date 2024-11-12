@@ -13,5 +13,7 @@ const env = process.env.NODE_ENV || 'development';
 console.log(env);
 
 export default () => {
-  return yaml.load(readFileSync(join(__dirname, `./${configFileNameObj[env]}.yml`), 'utf8')) as Record<string, any>;
+  return yaml.load(
+    readFileSync(join(__dirname, `./${configFileNameObj[env]}.yml`), 'utf8'),
+  ) as Record<string, any>;
 };
