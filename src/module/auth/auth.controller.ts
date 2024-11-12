@@ -1,9 +1,10 @@
-import { Controller, Post, Get, Body } from '@nestjs/common';
+/* eslint-disable prettier/prettier */
+import { Controller, Post, Body } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
 @Controller('/auth')
 export class AuthController {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) { }
 
   @Post('login')
   singIn(@Body() dto: any) {
@@ -11,6 +12,6 @@ export class AuthController {
   }
   @Post('signup')
   singUp(@Body() dto: any) {
-    return this.authService.singUp(dto.username, dto.password);
+    return this.authService.signUp(dto.username, dto.password);
   }
 }

@@ -7,6 +7,6 @@ export class AuthService {
   }
 
   signUp(username: string, password: string) {
-    return 'This action returns all cats';
+    return 'This action returns all cats' + username + password;
   }
 }
